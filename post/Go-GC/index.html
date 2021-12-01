@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<meta charset="utf-8">
+<title>Go GC - Day Day Up</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://vale-sail.github.io/post/Go-GC/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="阶段示意图  stack scan 收集根对象（全局变量和 goroutine 栈上的变量），该阶段会STW,开启读写屏障   mark 标记对象 标记对象，直至所有根对象可达的对象标记完成   mark termination 标记完成，重新扫描全局变量和栈上的变量，完成标记。开启STW 写屏障   sweep 并发清除白色对象    三色标记 黑色：已标记的对象，表示对象是根对象可达的。 白色">
+<meta name="keywords" content="go">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Go GC">
+<meta property="og:url" content="https://vale-sail.github.io/post/Go-GC/index.html">
+<meta property="og:site_name" content="Day Day Up">
+<meta property="og:description" content="阶段示意图  stack scan 收集根对象（全局变量和 goroutine 栈上的变量），该阶段会STW,开启读写屏障   mark 标记对象 标记对象，直至所有根对象可达的对象标记完成   mark termination 标记完成，重新扫描全局变量和栈上的变量，完成标记。开启STW 写屏障   sweep 并发清除白色对象    三色标记 黑色：已标记的对象，表示对象是根对象可达的。 白色">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/crop.0.0.568.568.180/68e50193ly8fnppcuzyhej20fs0fswf2.jpg`">
+<meta property="og:updated_time" content="2021-12-01T06:10:40.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go GC">
+<meta name="twitter:description" content="阶段示意图  stack scan 收集根对象（全局变量和 goroutine 栈上的变量），该阶段会STW,开启读写屏障   mark 标记对象 标记对象，直至所有根对象可达的对象标记完成   mark termination 标记完成，重新扫描全局变量和栈上的变量，完成标记。开启STW 写屏障   sweep 并发清除白色对象    三色标记 黑色：已标记的对象，表示对象是根对象可达的。 白色">
+<meta name="twitter:image" content="https://tvax1.sinaimg.cn/crop.0.0.568.568.180/68e50193ly8fnppcuzyhej20fs0fswf2.jpg`">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.7267a954616e3e7547d7.css">
+<script src="/config.431ea0df1f5df56dde03.js"></script>
+</head>
+<body>
+<is-d2a57d></is-d2a57d>
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script>
+</body>
+</html>
